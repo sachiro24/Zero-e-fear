@@ -2,9 +2,11 @@
 
 ## 1. Introduction
 
-Wireframes define the basic structure, content hierarchy and layout of application screens before high-fidelity UI design.
+Wireframes define the structural layout, content hierarchy and primary components of application screens before detailed visual design and implementation.
 
-The ZERO FEAR wireframes were developed to establish how users access important features and navigate through the application.
+For ZERO FEAR, wireframing establishes how users access the application's main features, interact with different modules and navigate between screens.
+
+Google Stitch is used to develop high-fidelity UI concepts based on these structural decisions.
 
 ## 2. Main Navigation Structure
 
@@ -16,63 +18,96 @@ The application uses five primary bottom navigation tabs:
 4. Discover
 5. Profile
 
+My Garage is accessible through the Home and Profile sections rather than being a separate bottom navigation tab.
+
 ## 3. Home Dashboard Wireframe
 
 ### Main Sections
 
 1. Application header.
 2. Registered vehicle overview.
-3. Battery percentage and estimated remaining range.
+3. Battery percentage and displayed remaining range.
 4. Quick action shortcuts.
-5. AI Dashboard Scanner access.
+5. Dashboard Scanner access.
 6. Driving efficiency summary.
 7. Recent journeys and activity.
-8. Bottom navigation.
+8. Charging discovery shortcut.
+9. My Garage access.
+10. Bottom navigation.
 
 ### Main Purpose
 
-Provide users with a personalised overview of their electric vehicle and quick access to important features.
+Provide users with a personalised overview of their electric vehicle and quick access to important application features.
 
-## 4. Explore Charging Wireframe
+## 4. Discover – Charging Station Map Wireframe
 
 ### Main Sections
 
-1. Search bar.
+1. Search location field.
 2. Charging station filters.
 3. Interactive map.
 4. Charging station markers.
-5. Collapsible station details panel.
-6. Connector and charging power information.
-7. Pricing and amenities.
-8. Navigation action.
+5. Selected station indicator.
+6. Collapsible station details panel.
+7. Connector types and charging power.
+8. Pricing and available facilities.
+9. Navigation action.
 
 ### Main Purpose
 
-Help users discover charging stations and understand their available facilities.
+Help users discover charging stations and review relevant station information.
+
+### Station Details
+
+The station details panel should provide relevant information about the selected charging station without requiring unnecessary separate screens for individual information categories.
+
+Live availability and reservation information should only be displayed when supported by external service integrations.
 
 ## 5. Trip Planner Wireframe
 
-### Main Sections
+The trip planning experience consists of four main screens.
+
+### Screen 1 – Journey Setup
 
 1. Starting location input.
 2. Destination input.
 3. Vehicle selection.
 4. Current battery percentage.
-5. Journey preferences.
-6. Plan Journey action.
+5. Plan Journey action.
 
-### Route Results Sections
+### Screen 2 – Route Analysis
 
-1. Route overview.
-2. Estimated distance and duration.
-3. Predicted arrival battery.
-4. Recommended charging stops.
-5. Alternative routes.
-6. Start Navigation action.
+1. Route map.
+2. Estimated distance.
+3. Estimated journey duration.
+4. Estimated energy requirements.
+5. Predicted arrival battery percentage.
+6. Route overview.
+
+### Screen 3 – Route Alternatives
+
+1. Recommended route.
+2. Alternative route options.
+3. Estimated arrival battery percentage.
+4. Recommended charging stops when required.
+5. Estimated charging information.
+6. Select Route action.
+
+### Screen 4 – Active Navigation
+
+1. Navigation map.
+2. Next navigation instruction.
+3. Remaining distance.
+4. Estimated arrival time.
+5. Predicted battery information.
+6. Find Charger action.
+7. End Trip action.
 
 ### Main Purpose
 
 Allow users to plan journeys using EV-specific information and estimated battery requirements.
+
+All route, energy and arrival battery calculations are estimates and should not be presented as guaranteed outcomes.
 
 ## 6. My Garage Wireframe
 
@@ -81,20 +116,30 @@ Allow users to plan journeys using EV-specific information and estimated battery
 1. Garage header.
 2. Registered vehicle cards.
 3. Primary vehicle indicator.
-4. Battery percentage and estimated range.
+4. Vehicle information.
 5. Vehicle management actions.
 6. Add Vehicle action.
 7. Bottom navigation.
 
+### Vehicle Details
+
+The individual vehicle details screen should provide:
+- Vehicle manufacturer and model.
+- Variant and model year.
+- Available vehicle specifications.
+- Primary vehicle status.
+- Edit vehicle action.
+
 ### Main Purpose
 
-Allow users to manage their registered electric vehicles.
+Allow users to register, view and manage their electric vehicles.
 
 ## 7. Add Vehicle Wireframe
 
 The vehicle registration process uses three steps.
 
-### Step 1 – Vehicle Model Selection
+### Step 1 – Vehicle Selection
+
 - Manufacturer selection.
 - Vehicle model.
 - Powertrain variant.
@@ -102,29 +147,37 @@ The vehicle registration process uses three steps.
 - Continue action.
 
 ### Step 2 – Vehicle Confirmation
+
 - Vehicle preview.
 - Selected variant.
-- Verified vehicle specifications.
+- Available vehicle specifications.
 - Primary vehicle selection.
 - Confirm and Add Vehicle action.
 
 ### Step 3 – Vehicle Added
+
 - Registration success message.
 - Registered vehicle summary.
 - Go to My Garage action.
-- Plan a Trip shortcut.
+- Continue to Dashboard Scanner option.
 
-## 8. AI Dashboard Scanner Wireframe
+### Main Purpose
 
-The scanner workflow contains three screens.
+Allow users to register an EV and establish the vehicle information used by other application modules.
 
-### Screen 1 – Scan Dashboard
+## 8. Dashboard Scanner Wireframe
+
+The dashboard scanning workflow consists of three main screens.
+
+### Screen 1 – Dashboard Scanner
+
 - Camera preview.
 - Dashboard alignment guidance.
 - Capture action.
 - Manual entry option.
 
 ### Screen 2 – Review Readings
+
 - Captured dashboard image.
 - Extracted battery percentage.
 - Displayed remaining range.
@@ -133,25 +186,100 @@ The scanner workflow contains three screens.
 - Confirm and Save action.
 
 ### Screen 3 – Scan Success
+
 - Confirmation message.
 - Saved vehicle reading summary.
 - Return to Home action.
 - View My Garage action.
 
-## 9. Insights and Efficiency Wireframe
+### Main Purpose
 
-### Main Sections
+Use AI-assisted image processing to extract useful information from EV dashboard photographs.
+
+Extracted information must be reviewed and confirmed by the user before it becomes a saved vehicle record.
+
+## 9. Insights and Vehicle History Wireframe
+
+### Insights Dashboard
+
+Main Sections:
 
 1. Vehicle selector.
-2. Monthly distance summary.
-3. Driving efficiency card.
-4. Battery reading trend chart.
-5. Recent journeys.
-6. Full vehicle logbook action.
+2. Reporting period selection.
+3. Monthly distance summary.
+4. Driving efficiency overview.
+5. Battery reading trend chart.
+6. Recent journeys.
+7. Charging summary.
+8. Full Vehicle Logbook action.
+
+### Battery Reading History
+
+- Latest confirmed battery percentage.
+- Displayed remaining range.
+- Chronological reading list.
+- Reading date and time.
+- Reading source: AI Scan or Manual Entry.
+- Reading filters.
+
+### Battery Reading Details
+
+- Confirmed battery percentage.
+- Displayed remaining range.
+- Odometer reading, when available.
+- Reading date and time.
+- Reading source.
+- Original dashboard photograph, when saved.
+- Edit and delete actions.
+
+### Journey History
+
+- Chronological journey list.
+- Journey origin and destination.
+- Journey date.
+- Distance travelled.
+- Journey duration.
+- Journey details access.
+
+### Journey Details
+
+- Journey route.
+- Starting and ending information.
+- Distance travelled.
+- Duration.
+- Available battery readings.
+- Journey summary.
+
+### Charging History
+
+- Chronological charging session list.
+- Charging date and time.
+- Charging location, when available.
+- Battery level before and after charging, when recorded.
+- Energy added, when available.
+- Charging session details access.
+
+### Charging Session Details
+
+- Charging location.
+- Session date and time.
+- Starting and ending battery percentages, when recorded.
+- Energy added, when available.
+- Charging duration.
+- Recorded charging cost, when available.
+
+### Full Vehicle Logbook
+
+Provides a consolidated view of available vehicle records, including:
+
+- Battery readings.
+- Journey history.
+- Charging sessions.
+- Relevant vehicle activity.
 
 ### Main Purpose
 
-Present historical vehicle information and help users understand their driving activity.
+Present historical vehicle information and help users understand their driving activity, charging records and battery trends.
 
 ## 10. Profile and Settings Wireframe
 
@@ -159,15 +287,20 @@ Present historical vehicle information and help users understand their driving a
 
 1. User profile information.
 2. Primary vehicle shortcut.
-3. Application preferences.
-4. Theme selection.
-5. Notification settings.
-6. Privacy and security.
-7. Help and support.
-8. About application.
-9. Logout action.
+3. My Garage access.
+4. Application preferences.
+5. Theme selection.
+6. Notification preferences.
+7. Privacy and security.
+8. Help and support.
+9. About application.
+10. Logout action.
 
-## 11. Marketplace Wireframe
+### Main Purpose
+
+Allow users to manage their account information, registered vehicles and application preferences.
+
+## 11. EV Marketplace Wireframe
 
 ### Marketplace Home
 
@@ -191,20 +324,57 @@ Present historical vehicle information and help users understand their driving a
 6. Vehicle condition.
 7. Seller information.
 8. Contact Seller action.
+9. Report Listing action.
 
-## 12. Wireframe Design Principles
+### Main Purpose
+
+Allow users to browse electric vehicles and access relevant listing and seller information.
+
+## 12. Future UI Concepts
+
+The following features may be explored in future design iterations:
+
+- AI EV Assistant.
+- Rewards and Achievements.
+- Advanced Vehicle Analytics.
+- Marketplace Seller Management.
+
+These features are not part of the current completed UI design scope.
+
+## 13. Wireframe Design Principles
 
 - Keep screens focused on their primary purpose.
 - Prioritise important information.
-- Avoid overcrowding.
+- Avoid overcrowding and unnecessary interface elements.
 - Maintain consistent navigation.
-- Use clear content hierarchy.
+- Use a clear content hierarchy.
 - Provide simple and predictable user interactions.
+- Use progressive disclosure for advanced information.
+- Maintain consistent components across application modules.
 
-## 13. Relationship to High-Fidelity Designs
+## 14. Relationship to High-Fidelity Designs
 
-The wireframes served as the structural foundation for the Google Stitch UI designs.
+The structural wireframes establish the layout and content requirements for the ZERO FEAR application.
 
-The high-fidelity designs introduced the ZERO FEAR visual identity, colours, typography, cards, icons and detailed interface elements.
+Google Stitch is used to develop high-fidelity UI concepts based on these requirements.
 
-The approved Google Stitch designs will be stored separately as visual references.
+The high-fidelity designs introduce:
+- ZERO FEAR visual identity.
+- Colours and typography.
+- Cards and reusable interface components.
+- Icons and illustrations.
+- Detailed spacing and layout.
+- Interactive visual elements.
+
+Google Stitch screenshots and approved visual references should be maintained separately from this document.
+
+## 15. Documentation and Implementation Status
+
+This document describes the intended wireframe structure of the ZERO FEAR application.
+
+The structural concepts and high-fidelity UI designs are being developed before implementation.
+
+Not every screen described in this document has an individually completed or approved design.
+
+Actual application components and interactions will be implemented and tested during React Native development.
+
