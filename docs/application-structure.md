@@ -4,120 +4,309 @@
 
 ZERO FEAR is a personal EV intelligence platform initially targeting electric vehicle owners in Sri Lanka.
 
-The application aims to provide a connected experience for EV ownership through vehicle intelligence, charging discovery, battery-aware trip planning and EV-related services.
+The application aims to provide a connected experience for EV ownership through vehicle intelligence, battery reading management, charging discovery, battery-aware trip planning, driving insights and EV-related services.
 
-The mobile application will use a five-tab bottom navigation structure.
+The mobile application follows a five-tab bottom navigation structure to organise its main features and provide a consistent user experience.
 
-## 2. Main Navigation
+The application is planned as an Android-first mobile application, with the possibility of supporting iOS in a later release.
 
-### 2.1 Home
+## 2. Main Application Navigation
 
-Purpose: Provide a personalised overview of the user's electric vehicle.
+The application consists of five primary navigation modules:
 
-Main functions:
-- Display registered primary vehicle.
-- Show latest confirmed battery percentage.
-- Display estimated remaining driving range.
-- Access AI Dashboard Scanner.
-- View a summary of driving efficiency.
-- Access recent trip and vehicle activity.
-- Quick access to trip planning and charging discovery.
+1. Home
+2. Insights
+3. Plan
+4. Discover
+5. Profile
 
-### 2.2 Insights
+## 3. Main Application Modules
 
-Purpose: Help users understand their vehicle's real-world performance.
+### 3.1 Home
 
-Main functions:
-- Dashboard reading history.
-- Battery percentage history.
-- Recorded trip distance.
-- Battery consumption observations.
-- Driving efficiency calculations.
-- Charging history.
-- Vehicle performance insights.
+**Purpose:** Provide a personalised overview of the user's electric vehicle and quick access to important features.
 
-### 2.3 Plan
+**Main functions:**
+- Display the selected primary vehicle.
+- Show the latest confirmed battery percentage.
+- Display the displayed remaining driving range.
+- Access the AI Dashboard Scanner.
+- Provide a driving efficiency summary.
+- Display recent journeys and vehicle activity.
+- Access My Garage.
+- Provide shortcuts to Trip Planning.
+- Provide shortcuts to Charging Discovery.
 
-Purpose: Help users plan journeys using EV-specific information.
+**Main screens:**
+- Home Dashboard.
+- Dashboard Scanner.
+- Review Extracted Readings.
+- Scan Success.
 
-Main functions:
+### 3.2 Insights
+
+**Purpose:** Help users understand their vehicle's real-world performance and historical activity.
+
+**Main functions:**
+- View battery reading history.
+- Monitor battery percentage trends.
+- Review recorded journey distances.
+- View driving efficiency information.
+- Review charging history.
+- Access individual historical records.
+- View consolidated vehicle activity.
+
+**Main screens:**
+- Insights Dashboard.
+- Battery Reading History.
+- Battery Reading Details.
+- Journey History.
+- Journey Details.
+- Charging History.
+- Charging Session Details.
+- Full Vehicle Logbook.
+
+### 3.3 Plan
+
+**Purpose:** Help users plan journeys using EV-specific information and estimated battery requirements.
+
+**Main functions:**
 - Select starting location.
 - Select destination.
 - Select registered vehicle.
-- Enter or select current battery percentage.
+- Enter or confirm current battery percentage.
 - Calculate estimated energy consumption.
 - Predict arrival battery percentage.
 - Recommend charging stops when necessary.
 - Compare alternative routes.
-- Display estimated journey costs.
+- Display estimated journey costs where sufficient information is available.
 
-### 2.4 Discover
+**Main screens:**
+- Journey Setup.
+- Route Analysis.
+- Route Alternatives.
+- Active Navigation.
 
-Purpose: Help users discover EV-related locations and services.
+Charging stop recommendations are presented as part of the route planning experience rather than requiring a separate primary navigation module.
 
-Main functions:
-- Charging station discovery.
+### 3.4 Discover
+
+**Purpose:** Help users discover EV-related locations, charging infrastructure and marketplace services.
+
+Discover contains two main areas.
+
+#### A. Charging Discovery
+
+**Main functions:**
 - Interactive charging station map.
-- Charging station details.
-- Connector compatibility.
-- Charging power and pricing.
-- Station availability information where supported.
-- EV marketplace access.
+- Search for charging stations.
+- Filter charging stations.
+- View charging station details.
+- Review connector compatibility.
+- View charging power and pricing.
+- Review available station facilities.
+- Access navigation directions.
 
-### 2.5 Profile
+**Main screens:**
+- Charging Station Map.
+- Charging Station Details.
 
-Purpose: Manage the user's account and application preferences.
+#### B. EV Marketplace
+
+**Main functions:**
+- Browse electric vehicle listings.
+- Search and filter listings.
+- View vehicle photographs.
+- Review vehicle specifications.
+- View vehicle prices and conditions.
+- Access seller information.
+- Contact sellers.
+- Save favourite listings.
+
+**Main screens:**
+- Marketplace Home.
+- Vehicle Listing Details.
+
+Live charging availability, reservations and marketplace transactions depend on appropriate external integrations and backend functionality.
+
+### 3.5 Profile
+
+**Purpose:** Allow users to manage their accounts, registered vehicles and application preferences.
+
+**Main functions:**
+- View and manage personal information.
+- Access My Garage.
+- Manage account settings.
+- Configure notification preferences.
+- Change application theme.
+- Manage privacy and security settings.
+- Access Help and Support.
+- Log out.
+
+**Main screens:**
+- Profile and Settings.
+
+## 4. Additional Application Modules
+
+The following modules support the main navigation sections.
+
+### 4.1 My Garage
+
+Allows users to register and manage their electric vehicles.
 
 Main functions:
-- Personal information.
-- Account settings.
-- Notification preferences.
-- Theme selection.
-- Privacy and security settings.
-- Help and support.
+- Add a new vehicle.
+- View registered vehicles.
+- Select a primary vehicle.
+- View vehicle details.
+- Edit vehicle information.
 
-## 3. Additional Application Modules
+### 4.2 Add Vehicle
 
-### My Garage
-Manage registered electric vehicles.
+Allows users to register an electric vehicle by selecting:
+- Manufacturer.
+- Model.
+- Variant.
+- Model year.
 
-### Add Vehicle
-Register an EV by selecting manufacturer, model, variant and model year.
+The registration process includes vehicle selection, vehicle confirmation and registration success.
 
-### AI Dashboard Scanner
-Capture dashboard photographs, extract readings and allow users to confirm the information.
+### 4.3 AI Dashboard Scanner
 
-### EV Marketplace
-Browse electric vehicles and related listings.
+Uses image processing to extract useful information from EV dashboard photographs.
 
-### Dashboard Reading History
-Access previously confirmed dashboard readings.
+Main functions:
+- Capture dashboard photographs.
+- Extract battery percentage.
+- Extract displayed remaining range when visible.
+- Extract odometer information when visible.
+- Allow users to review and correct extracted values.
+- Save confirmed readings.
 
-### AI Assistant
-Provide assistance with EV-related questions and vehicle information.
+Manual reading entry is available as an alternative.
 
-## 4. Onboarding Journey
+### 4.4 Vehicle Reading Management
 
-1. Splash screen.
-2. Introduction and onboarding.
-3. User registration or login.
-4. Add electric vehicle.
-5. Scan dashboard photograph.
-6. Review extracted readings.
-7. Confirm and save readings.
-8. Enter the Home dashboard.
+Maintains historical dashboard readings.
 
-Manual reading entry must be available as an alternative to dashboard scanning.
+Main functions:
+- Store confirmed battery readings.
+- Record reading date and time.
+- Identify the reading source.
+- Display historical readings.
+- Provide access to individual reading details.
 
-## 5. Navigation Design Principles
+### 4.5 Vehicle Activity Management
 
-- Maintain consistent bottom navigation.
+Organises available vehicle activity records.
+
+Main functions:
+- Maintain journey records.
+- Maintain charging session records.
+- Provide historical activity information.
+- Support the Full Vehicle Logbook.
+
+## 5. User Onboarding Structure
+
+### New User Journey
+
+1. Splash Screen.
+2. Welcome and Onboarding.
+3. User Registration.
+4. Email Verification, if implemented.
+5. Add Electric Vehicle.
+6. Vehicle Selection.
+7. Vehicle Confirmation.
+8. Dashboard Scanner.
+9. Review Extracted Readings.
+10. Confirm and Save.
+11. Home Dashboard.
+
+Users should have the option to skip the initial dashboard scan and enter readings manually or later.
+
+### Returning User Journey
+
+1. Splash Screen.
+2. Login.
+3. Authentication.
+4. Home Dashboard.
+
+Users without a registered vehicle should be directed to vehicle registration.
+
+Returning users with an existing vehicle should not be forced to repeat vehicle registration or dashboard scanning.
+
+## 6. Application Navigation Design
+
+The five primary navigation tabs provide access to the main application modules.
+
+| Navigation Tab | Main Module | Supporting Features |
+|---|---|---|
+| Home | Vehicle Overview | Dashboard Scanner, My Garage, Quick Actions |
+| Insights | Vehicle Intelligence | Battery History, Journey History, Charging History, Logbook |
+| Plan | Trip Planning | Route Analysis, Alternatives, Charging Stops, Navigation |
+| Discover | EV Discovery | Charging Stations, Marketplace |
+| Profile | Account Management | Settings, Preferences, My Garage, Support |
+
+My Garage is accessible through Home and Profile rather than being a separate bottom navigation tab.
+
+## 7. Future Application Modules
+
+The following capabilities may be introduced in future releases:
+
+### AI EV Assistant
+Provides an AI-powered conversational assistant for EV-related questions and vehicle information.
+
+### Rewards and Achievements
+Encourages efficient driving through achievements and reward mechanisms.
+
+### Advanced Vehicle Analytics
+Provides more detailed analysis of driving patterns, vehicle efficiency and battery performance.
+
+### Marketplace Seller Management
+Allows users to create, manage and maintain EV marketplace listings.
+
+These modules are part of the longer-term product direction and should not be treated as completed MVP functionality.
+
+## 8. Application Design Principles
+
+- Maintain consistent five-tab bottom navigation.
 - Keep each screen focused on one primary purpose.
-- Avoid unnecessary information.
+- Avoid unnecessary information and interface elements.
 - Use progressive disclosure for advanced information.
-- Maintain consistent UI components across the application.
+- Maintain consistent UI components across modules.
 - Prioritise simple and intuitive interactions.
+- Clearly distinguish confirmed records from estimated information.
+- Provide appropriate loading, error, empty and success states.
+- Support different mobile screen sizes.
 
-## 6. Design Direction
+## 9. Technology Direction
 
-The application follows a futuristic EV technology visual identity with dark and light theme support.
+The planned application technology stack is:
+
+| Layer | Technology |
+|---|---|
+| Mobile Application | React Native |
+| Mobile Framework | Expo |
+| Programming Language | TypeScript |
+| Backend | Python |
+| Backend Framework | Django |
+| API Development | Django REST Framework |
+| Database | PostgreSQL |
+| Geospatial Database Support | PostGIS |
+| AI Image Processing | Vision API through the backend |
+
+The mobile application communicates with the backend through REST APIs.
+
+The backend manages application data, authentication, vehicle records, trip information and integrations with external services.
+
+AI image-processing requests are handled through the backend rather than exposing API credentials directly in the mobile application.
+
+## 10. Implementation Status
+
+This document describes the planned logical application structure and module organisation of ZERO FEAR.
+
+The UI/UX concepts are being developed using Google Stitch.
+
+The mobile application, backend services, database and external integrations will be implemented during the subsequent development phases.
+
+The presence of a module in this document does not indicate that its functionality has already been implemented or integrated.
